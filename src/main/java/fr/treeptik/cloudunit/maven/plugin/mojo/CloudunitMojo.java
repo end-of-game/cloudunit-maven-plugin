@@ -117,7 +117,7 @@ public abstract class CloudunitMojo
     {
         Map<String, String> parameters = new HashMap<String, String>();
         parameters.put( "applicationName", applicationName );
-        parameters.put( "tag", ( applicationName + new Date().getTime() ).substring( 0, 14 ) );
+        parameters.put( "tag", ( applicationName.substring( 5 ) + new Date().getTime() ).substring( 0, 9 ) );
         parameters.put( "description",
                         "Snapshot from maven plugin at " + new SimpleDateFormat( "dd/MM/yyyy" ).format( new Date() ) );
         try
