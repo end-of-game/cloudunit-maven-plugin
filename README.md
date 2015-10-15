@@ -27,7 +27,7 @@ mvn clean install
 			<plugin>
 				<groupId>fr.treeptik</groupId>
 				<artifactId>cloudunit-maven-plugin</artifactId>
-				<version>0.9</version>
+				<version>1.0</version>
 				<configuration>
 				
 				<!-- Non required : by default, the plugin uses a Cloudunit Manager 
