@@ -17,6 +17,7 @@ package fr.treeptik.cloudunit.maven.plugin.model;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonDeserialize;
@@ -36,6 +37,36 @@ public class Application
     private Status status;
 
     private String location;
+
+    private String origin;
+
+    private Set<PortToOpen> portsToOpen;
+
+    public Set<PortToOpen> getPortsToOpen() {
+        return portsToOpen;
+    }
+
+    public void setPortsToOpen(Set<PortToOpen> portsToOpen) {
+        this.portsToOpen = portsToOpen;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getCuInstanceName() {
+        return cuInstanceName;
+    }
+
+    public void setCuInstanceName(String cuInstanceName) {
+        this.cuInstanceName = cuInstanceName;
+    }
+
+    private String cuInstanceName;
 
     @JsonDeserialize( using = JsonDateDeserializer.class )
     private Date date;
